@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="library.css" type="text/css">
+  <title>Python vs JavaScript: Library Usage</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js">
+    $(document).ready(function () {
+      $("#flip").click(function () {
+        $("#panel").slideToggle("slow");
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="body">
+
+    <div id="section">
+      <section id="topic">
+        <h1 style="font-size: xx-large; ">Python vs JavaScript: Library Usage</h1>
+        <h5>Last edit: April 17, 2023 By Sannie Cheung</h5>
+        <img src="/usage/PVJS.png" width="80%">
+      </section>
+      <section id="intro">
+        <p style="font-size: larger;">
+          <b>JavaScript</b> and <b>Python</b>
+          support the library function, which is the pre-written Python/ JavaScript code collection.
+          <i>Python libraries</i> are used to perform specific tasks or solve specific problems.
+          Conversely, <i>JavaScript libraries</i> add functionality or effects to a web page.
+          In this section, we would like to introduce the libraries in <b>Python</b> and <b>JavaScript</b>.
+        </p>
+      </section>
+      <hr />
+      <section id="JavaScript">
+        <h2>JavaScript Libraries</h2>
+        <p>
+          <b>JavaScript</b> has a vast collection of libraries for client-side scripting and server-side development.
+          These
+          libraries can be readily installed and imported using package managers like npm. Utilizing the Javascript
+          library function would help you implement standard functionality you're your web
+          instantly.
+          Here are some popular JavaScript libraries you may hear of:
+        </p>
+        <ol>
+          <section id="react">
+            <li>React</li>
+            <p>
+              React is a popular front-end JavaScript framework that automatically updates the DOM whenever your data
+              changes.
+              The key to React's power is composable components. You build encapsulated components once and reuse them
+              throughout your application. For example, you might create an EmojiSearch component for search
+              functionality, a Comment component for comments, and Auth component for authentication. Then compose them
+              together to build the page you want.
+              <a href="https://ahfarmer.github.io/emoji-search/">
+                <h1>Emoji Search</h1>
+              </a>
+              <embed type="text/html" src="https://ahfarmer.github.io/emoji-search/ " width=100% height=60%>
+            <p>As shown in the emoji search demo, you can create reusable components for search, comments, filters, etc.
+              Then compose them together in different ways to generate multiple pages from a single set of components.
+              Whenever the underlying data updates, React efficiently re-renders only the changed components.
+            </p>
+            <p>In summary, React revolutionized front-end development by handling updates, facilitating composable
+              components, and enabling adaptable user experiences. You get to focus on designing interfaces instead of
+              manually updating the DOM.
+            </p>
+          </section>
+          <section id="jquery">
+            <li>jQuery</li>
+            <p>For adding some interactivity to your pages, <b>jQuery</b> is fun.
+              It has shortcuts for animations, getting external data, event responses, and updating HTML, CSS, and
+              JavaScript elements
+              - all in simple lines of code. Try this:
+            <div id="flip">Click Me!</div>
+            <div id="panel">Hello world!</div>
+            </p>
+          </section>
+          <section id="moment">
+            <li>Moment.js</li>
+            <p><img src="moment.png" width= 60%>
+              Dates are tricky, so <b>Moment.js</b> was a lifesaver. It helps format dates in any locale, handle
+              timezones
+              and
+              daylight savings, give relative dates like "tomorrow", and convert between calendars. Extra plugins
+              provide
+              internationalization, time differences, duration, and holiday functionality.
+              Finally, a dating tool that works! No more searching documentation to figure out which method does what.
+              Moment hides date complexity so you can focus on building impressive web apps.
+            </p>
+          </section>
+
+        </ol>
+      </section>
+      <hr />
+      <section id="Python">
+        <h2>Python Libraries</h2>
+        <p>
+          <b>Python</b>provides many libraries for scientific computing, data analysis, machine learning, and web
+          development.
+          Unlike JavaScript, these libraries are required to download through Python's package manager, pip. After that,
+          they can be easily used in your code by <code>import</code> the library.
+          Here are some popular libraries you hear of:<br>
+        </p>
+        <ol>
+          <section id="numpy">
+            <li>NumPy</li>
+            <p>
+              <a href="https://numpy.org/"><b>NumPy</b></a> is great for working with multi-dimensional arrays and
+              matrices. It is essential for engineering and
+              science domains. Fast array operations and integration of C/C++ or Fortran code are performed efficiently.
+            </p>
+          </section>
+          <section id="pandas">
+            <li>Pandas</li>
+            <p>
+              <a href="https://pandas.pydata.org/"><b>Pandas</b></a>
+              simplified working with tabular data. It is perfect for analyzing and manipulating data tables. CSV
+              files could be loaded into data frames. Selected columns, stats computed row-wise or column-wise, grouping
+              data, pivoted and merged datasets effortlessly by using <b>Pandas</b>.
+              Example:
+            </p>
+            <pre class="highlight">
+            <code>import pandas as pd
+            data = {
+              "Student": ["Abie", "Belly", "Canas"],
+              "Height": [168, 155, 178]
+            }
+            
+            #load data into a DataFrame object:
+            df = pd.DataFrame(data)
+
+            print(df) 
+            </code>
+          </pre>
+            <p>Result:</p>
+            <img src="GP_pandas_height.png">
+          </section>
+          <section id="random">
+            <h2>Random</h2>
+            <p>
+              The <b>random</b> library is great for generating random numbers and shuffling sequences. You can use
+              <code>random.randint()</code> to get a random integer in a specified range, <code>random.random()</code>
+              to get a float between 0
+              and 1, and <code>random.shuffle()</code> to randomly shuffle the elements of a list.
+            </p>
+            <pre class="highlight">
+              <code>import random
+
+              //generate random choice from the list
+              coin = random.choice(["heads", "tails"])
+              print(coin)
+
+              //generate random interger between 1-10
+              number = random.randint(1, 10)
+              print(number)
+              </code>
+            </pre>
+
+          </section>
+
+        </ol>
+      </section>
+
+      <a href="/index.html"><button class="button-64" role="button"><span class="text"><span class="text">Back to Home
+              Page</b></button></a>
+    </div>
+
+    <div id="sidebar">
+      <h3>In this page</h1>
+        <ul style="font-style: italic;">
+          <li><a href="#JavaScript">JavaScript</a></li>
+          <ol>
+            <li><a href="#react">React</a></li>
+            <li><a href="#jquery">jQuery</a></li>
+            <li><a href="#moment">Moment</a></li>
+          </ol>
+          <li><a href="#Python">Python</a></li>
+          <ol>
+            <li><a href="#numy">NumPy</a></li>
+            <li><a href="#pandas">Pandas</a></li>
+            <li><a href="#random">Random</a></li>
+          </ol>
+          <li><a href="https://sa-k33.github.io/py-js_experience/">Back to Home</a></li>
+
+        </ul>
+    </div>
+  </div>
+
+</body>
+
+</html>
